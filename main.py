@@ -284,7 +284,7 @@ def run_single_account(total, idx, user_mi, passwd_mi):
     idx_info = ""
     if idx is not None:
         idx_info = f"[{idx + 1}/{total}]"
-    log_str = f"[{format_now()}]\n{idx_info}账号：{desensitize_user_name(user_mi)}"
+    log_str = f"[{format_now()}]\n{idx_info}账号：账户{idx + 1}}"
     try:
         runner = MiMotionRunner(user_mi, passwd_mi)
         exec_msg, success = runner.login_and_post_step(min_step, max_step)
